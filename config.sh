@@ -24,6 +24,7 @@ flatpak install flathub org.remmina.Remmina
 flatpak install flathub org.onlyoffice.desktopeditors
 flatpak install flathub com.jgraph.drawio.desktop
 flatpak install flathub org.kde.krita
+flatpak install flathub org.telegram.desktop
 
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward ['<Alt>Shift_L']
