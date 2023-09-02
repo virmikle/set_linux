@@ -32,6 +32,8 @@ sudo dnf install make -y
 make install
 dconf reset -f /org/gnome/
 gnome-extensions enable "dash-to-panel@jderose9.github.com"
+gnome-extensions disable "background-logo@fedorahosted.org"
+
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
@@ -39,7 +41,9 @@ gsettings set org.gnome.desktop.peripherals.mouse speed -0.5
 
 
 echo ""
-echo "| Завершено, нужно перезагрузиться"
+echo "| Завершено, сейчас будет выполнен принудительный выход из системы"
+killall -SIGQUIT gnome-shell
+
 else
 echo "| Отменено"
 fi
