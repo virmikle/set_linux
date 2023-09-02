@@ -10,8 +10,10 @@ if [ "$choice" == "y" ]; then
 
 sudo dnf upgrade
 sudo dnf update
+sudo dnf check-update
 sudo dnf install gnome-tweaks
 sudo dnf install steam
+sudo dnf install code
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward ['<Alt>Shift_L']
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source ['<Shift>Alt_L']
@@ -19,8 +21,13 @@ gsettings set org.gnome.desktop.peripherals.mouse speed -0.5
 
 
 flatpak update
-flatpak install Remmina
-flatpak install onlyoffice
+flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak install flathub org.remmina.Remmina
+flatpak install flathub org.onlyoffice.desktopeditors
+flatpak install flathub com.jgraph.drawio.desktop
+flatpak install flathub org.kde.krita
+
+
 echo ""
 echo "| Готово!"
 else
