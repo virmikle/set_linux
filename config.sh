@@ -22,13 +22,25 @@ flatpak install flathub com.jgraph.drawio.desktop --noninteractive -y
 flatpak install flathub org.kde.krita --noninteractive -y
 flatpak install flathub org.telegram.desktop --noninteractive -y
 
+cd ~/.local/share/gnome-shell/extensions/
+git clone "https://github.com/home-sweet-gnome/dash-to-panel.git";
+cd "dash-to-panel/";
+
+#-- Install Dependencies  ------------------------------------
+sudo apt install gettext -y;
+sudo apt install make -y;
+
+#-- Install Extension ------------------------------------
+make install;
+gnome-extensions enable "dash-to-panel@jderose9.github.com";
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
 gsettings set org.gnome.desktop.peripherals.mouse speed -0.5
 
+
 echo ""
-echo "| Завершено"
+echo "| Завершено, нужно перезагрузиться"
 else
 echo "| Отменено"
 fi
