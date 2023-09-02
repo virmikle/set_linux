@@ -15,6 +15,8 @@ sudo dnf install gnome-tweaks -q
 sudo dnf install steam -q
 sudo dnf install code -q
 
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 flatpak update
 flatpak install flathub com.mattjakeman.ExtensionManager --noninteractive -y 
 flatpak install flathub org.remmina.Remmina --noninteractive -y 
@@ -22,6 +24,8 @@ flatpak install flathub org.onlyoffice.desktopeditors --noninteractive -y
 flatpak install flathub com.jgraph.drawio.desktop --noninteractive -y
 flatpak install flathub org.kde.krita --noninteractive -y
 flatpak install flathub org.telegram.desktop --noninteractive -y
+
+
 
 cd ~/.local/share/gnome-shell/extensions/
 git clone "https://github.com/home-sweet-gnome/dash-to-panel.git";
