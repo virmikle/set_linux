@@ -26,13 +26,12 @@ cd ~/.local/share/gnome-shell/extensions/
 git clone "https://github.com/home-sweet-gnome/dash-to-panel.git";
 cd "dash-to-panel/";
 
-#-- Install Dependencies  ------------------------------------
-sudo apt install gettext -y;
-sudo apt install make -y;
+sudo dnf install gettext -y
+sudo dnf install make -y
 
-#-- Install Extension ------------------------------------
-make install;
-gnome-extensions enable "dash-to-panel@jderose9.github.com";
+make install
+dconf reset -f /org/gnome/
+gnome-extensions enable "dash-to-panel@jderose9.github.com"
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
