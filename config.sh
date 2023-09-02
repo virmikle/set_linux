@@ -1,18 +1,18 @@
 
 echo ""
-echo "| Минимальная настройка системы"
+echo "| Настройка системы и установка программ. Актуально для Fedora."
 echo ""
 
 echo ""
-read -p ">>> Настройка для Fedora. Продолжаем? (y/n) " choice
+read -p ">>>Продолжаем? (y/n) " choice
 echo ""
 if [ "$choice" == "y" ]; then
 
 sudo dnf update
 
-sudo dnf install gnome-tweaks
-sudo dnf install steam
-sudo dnf install code
+sudo dnf install gnome-tweaks -q
+sudo dnf install steam -q
+sudo dnf install code -q
 
 flatpak update
 flatpak install flathub com.mattjakeman.ExtensionManager --noninteractive -y 
@@ -28,9 +28,9 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 gsettings set org.gnome.desktop.peripherals.mouse speed -0.5
 
 echo ""
-echo "| Готово!"
+echo "| Завершено"
 else
-echo "| Отмена!"
+echo "| Отменено"
 fi
 
 
