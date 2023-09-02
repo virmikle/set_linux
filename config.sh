@@ -1,6 +1,7 @@
 
 echo ""
 echo "| Настройка системы и установка программ. Актуально для Fedora."
+echo "| *после окончания установки и выхода из профиля, нужно открыть приложение Менеджер расширений и включить расширение Dash to Panel."
 echo ""
 
 echo ""
@@ -30,8 +31,6 @@ sudo dnf install gettext -y
 sudo dnf install make -y
 
 make install
-dconf reset -f /org/gnome/
-gnome-extensions enable "dash-to-panel@jderose9.github.com"
 gnome-extensions disable "background-logo@fedorahosted.org"
 
 
