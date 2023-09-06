@@ -46,7 +46,7 @@ gnome-extensions disable "background-logo@fedorahosted.org"
 
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
-gsettings set org.gnome.desktop.peripherals.mouse speed -0.5
+gsettings set org.gnome.desktop.peripherals.mouse speed -0.7
 gsettings set org.gnome.desktop.wm.keybindings show-desktop ['<Super>Cyrillic_ve']
 
 echo ""
